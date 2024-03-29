@@ -20,6 +20,8 @@ jobs:
       - run: flutter format --set-exit-if-changed .
       - run: flutter analyze .
       - run: flutter build apk
+      - run: flutter packages get
+      - run: flutter run
       - uses: actions/upload-artifact@v1
         with:
           name: release-apk
